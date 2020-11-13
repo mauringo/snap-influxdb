@@ -11,7 +11,7 @@ A fully configurable influxdb 1.8.3 snap
 
 Installable trough snapd:
 
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/mongo44-configurable)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/influxdb-configurable)
 
 
 
