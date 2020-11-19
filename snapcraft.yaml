@@ -21,20 +21,20 @@ confinement: strict
 apps:
     
     influxd:
-        command: bin/run.sh
+        command: bin/runinfluxd.sh
         daemon: simple
         plugs: [network, network-bind]
         restart-condition: always
         environment:
-          INFLUXDB_META_DIR: $SNAP_DATA/meta
-          INFLUXDB_DATA_DIR: $SNAP_DATA/data
-          INFLUXDB_DATA_WAL_DIR: $SNAP_DATA/wal
-          INFLUXDB_CONFIG_PATH: $SNAP_DATA/conf/influxdb.conf
-          INFLUXD_BOLT_PATH: $SNAP_DATA/influxdbv2/influxd.bolt
-          INFLUXD_ENGINE_PATH: $SNAP_DATA/influxdbv2/engine
+          INFLUXDB_META_DIR: $SNAP_COMMON/meta
+          INFLUXDB_DATA_DIR: $SNAP_COMMON/data
+          INFLUXDB_DATA_WAL_DIR: $SNAP_COMMON/wal
+          INFLUXDB_CONFIG_PATH: $SNAP_COMMON/conf/influxdb.conf
+          INFLUXD_BOLT_PATH: $SNAP_COMMON/influxdbv2/influxd.bolt
+          INFLUXD_ENGINE_PATH: $SNAP_COMMON/influxdbv2/engine
 
     influx:
-        command: bin/runclient.sh
+        command: usr/bin/influx
         plugs: [network, network-bind]
         
     info:
