@@ -1,6 +1,6 @@
 name: influxdb-configurable
 version: '1.8.3'
-base: core18
+base: core20
 architectures:
   - build-on: amd64
     run-on: amd64
